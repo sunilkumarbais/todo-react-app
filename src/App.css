@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEADER CONTAINER */
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border-bottom: 2px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* LOGO SECTION */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-section img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-section span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+/* THEME SECTION */
+.theam-section ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.theam-section li {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* THEME DOTS */
+.theam-section span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+
+/* Add Task Section*/
+.addTask {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--bg, #f9fafb);
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.addTask form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.addTask input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #111827;
+  transition: border-color 0.2s ease;
+}
+
+.addTask input[type="text"]:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.addTask .submitBtn {
+  padding: 0.75rem 1.25rem;
+  background-color: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.addTask .submitBtn:hover {
+  background-color: #4f46e5;
+}
+
+/* TaskList Section */
+.taskList {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.taskList .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.taskList .top p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.taskList .top p .count{
+  background-color: #3b82f6;
+}
+
+.taskList .clean-all {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.taskList .clean-all:hover {
+  background-color: #dc2626;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* CARD LIST SECTION */
+.taskList .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* INDIVIDUAL CARD */
+.taskList .taskCard {
+  flex: 1 1 calc(33.333% - 1rem);
+  background-color: #ffffff;
+  border-radius: 0px 10px 10px 0px;
+  padding: 1rem 0 1rem 1rem;
+  margin-right: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  min-width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+.taskList .taskCard:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.taskList .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.taskList .name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.taskList .date-time {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.taskList .right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.taskList .right i {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-left: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.taskList .right i:hover {
+  color: #1f2937;
+}
+
+/* RESPONSIVE: Stack on smaller screens */
+@media (max-width: 900px) {
+  .taskList .taskCard {
+    flex: 1 1 calc(50% - 1rem);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .addTask form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addTask .submitBtn {
+    width: 100%;
+  }
+
+  .taskList .taskCard {
+    flex: 1 1 100%;
+  }
+
+  .taskList .top {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .taskList .clean-all {
+    width: 100%;
+    text-align: center;
   }
 }
