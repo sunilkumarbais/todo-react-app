@@ -23,6 +23,6 @@ npm install
 ## 📬 Contact
 
 **Sunil Kumar Bais**  
-📧 Email: [sunilkumar](mailto:sunilkumarbais46@gmail.com)  
-💻 GitHub: [sunilkumar](https://github.com/sunilkumarbais)  
+🔗 LinkedIn: [sunilkumarbais](https://linkedin.com/in/sunilkumarbais)  
+💻 GitHub: [sunilkumarbais](https://github.com/sunilkumarbais)  
 
