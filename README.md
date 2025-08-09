@@ -19,10 +19,3 @@ Make sure you have **Node.js** and **npm** installed.
 git clone https://github.com/sunilkumarbais/todo-react-app.git
 cd todo-react-app
 npm install
-
-## 📬 Contact
-
-**Sunil Kumar Bais**  
-🔗 LinkedIn: [sunilkumarbais](https://linkedin.com/in/sunilkumarbais)  
-💻 GitHub: [sunilkumarbais](https://github.com/sunilkumarbais)  
-
